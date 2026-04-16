@@ -1,3 +1,0 @@
-E:/Documents/Code/C++/projects/Gomoku/build/CMakeFiles/GomokuGame.dir
-E:/Documents/Code/C++/projects/Gomoku/build/CMakeFiles/edit_cache.dir
-E:/Documents/Code/C++/projects/Gomoku/build/CMakeFiles/rebuild_cache.dir

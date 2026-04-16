@@ -1,8 +1,0 @@
-[
-{
-  "directory": "E:/Documents/Code/C++/projects/Gomoku/build",
-  "command": "D:\\Softwares\\msys2\\ucrt64\\bin\\g++.exe  @CMakeFiles/GomokuGame.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles\\GomokuGame.dir\\App\\main.cpp.obj -c E:\\Documents\\Code\\C++\\projects\\Gomoku\\App\\main.cpp",
-  "file": "E:/Documents/Code/C++/projects/Gomoku/App/main.cpp",
-  "output": "CMakeFiles/GomokuGame.dir/App/main.cpp.obj"
-}
-]
