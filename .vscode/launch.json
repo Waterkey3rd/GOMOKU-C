@@ -6,7 +6,7 @@
             "type": "cppdbg",
             "request": "launch",
             // 指向你刚刚生成的 exe [cite: 48, 49]
-            "program": "${workspaceFolder}/build/GUI.exe", 
+            "program": "${workspaceFolder}/build/${workspaceFolderBasename}.exe", 
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",

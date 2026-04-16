@@ -146,4 +146,16 @@ CMakeFiles/GOMOKU.dir/App/main.cpp.obj: \
  D:/Softwares/msys2/ucrt64/include/c++/15.1.0/bits/basic_ios.tcc \
  D:/Softwares/msys2/ucrt64/include/c++/15.1.0/bits/ostream.tcc \
  D:/Softwares/msys2/ucrt64/include/c++/15.1.0/istream \
- D:/Softwares/msys2/ucrt64/include/c++/15.1.0/bits/istream.tcc
+ D:/Softwares/msys2/ucrt64/include/c++/15.1.0/bits/istream.tcc \
+ E:\Documents\Code\C++\projects\Gomoku\App\Player.h \
+ E:\Documents\Code\C++\projects\Gomoku\App\Chessboard.h \
+ D:/Softwares/msys2/ucrt64/include/c++/15.1.0/vector \
+ D:/Softwares/msys2/ucrt64/include/c++/15.1.0/bits/stl_uninitialized.h \
+ D:/Softwares/msys2/ucrt64/include/c++/15.1.0/bits/stl_vector.h \
+ D:/Softwares/msys2/ucrt64/include/c++/15.1.0/bits/stl_bvector.h \
+ D:/Softwares/msys2/ucrt64/include/c++/15.1.0/bits/vector.tcc \
+ D:/Softwares/msys2/ucrt64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/stdint.h \
+ D:/Softwares/msys2/ucrt64/include/stdint.h \
+ D:/Softwares/msys2/ucrt64/include/c++/15.1.0/cstring \
+ D:/Softwares/msys2/ucrt64/include/string.h \
+ D:/Softwares/msys2/ucrt64/include/sec_api/string_s.h

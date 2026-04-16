@@ -27,11 +27,14 @@ private:
     std::vector<Event> history;
     placeAction lastPlaceAction;
     Color Winner=Color::None;
+    bool white_ready;
+    bool black_ready;
     int step;
 public://构造相关
     Chessboard(){
         reset();
     }
+    Chessboard(const Chessboard&) =delete;
     ~Chessboard() =default;
 public:
     void reset(){
@@ -41,18 +44,48 @@ public:
         lastPlaceAction= {.x=0,.y=0,.color=Color::None};
         history.clear();
     }
+    inline bool isready(){return white_ready&&black_ready;}
     inline bool isfull(){return step==W*H;}
     inline const std::vector<Event>& gethistory(){return history;}
     inline const placeAction& get_last_move(){return lastPlaceAction;}
     inline Color  get_piece_at(int x, int y){return board[y][x];}
+    inline const Color* getBoardData() const {return &board[0][0];}
+    inline const int getBoardSize() const {return W*H;}
+    inline const int& getBoardH() const {return H;}
+    inline const int& getBoardW() const {return W;}
     //落子接口
     bool place_piece(int x,int y,Color color){
-        if(board[x][y]!=Color::None) return false;
+        if(board[x][y]!=Color::None||!isready()) return false;
         lastPlaceAction={.x=x,.y=y,.color=color};
         board[y][x]=color;
         step++;
         history.push_back({step,lastPlaceAction});
         return true;
+    }
+    bool place_piece(placeAction action){
+        if(board[action.x][action.y]!=Color::None||!isready()) return false;
+        board[action.y][action.x]=action.color;
+        lastPlaceAction=action;
+        step++;
+        history.push_back({step,action});
+        return true;
+    }
+    bool registerPlayer(Color color){
+        if(color==Color::None) return false;
+        if(color==Color::Black&&!black_ready)
+        {
+            black_ready=true;
+            return true;
+        }  
+        if(color==Color::Black&&black_ready)
+            return false;
+        if(color==Color::White&&!white_ready)
+        {
+            white_ready=true;
+            return true;
+        }  
+        if(color==Color::White&&white_ready)
+            return false;
     }
     //检查胜利
     Color checkWin(){
@@ -125,5 +158,6 @@ public:
         }
         if(count==5)
             return color;
+        return Color::None;
     }
 };
