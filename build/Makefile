@@ -116,24 +116,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named GOMOKU
+# Target rules for targets named GomokuGame
 
 # Build rule for target.
-GOMOKU: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 GOMOKU
-.PHONY : GOMOKU
+GomokuGame: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 GomokuGame
+.PHONY : GomokuGame
 
 # fast build rule for target.
-GOMOKU/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GOMOKU.dir\build.make CMakeFiles/GOMOKU.dir/build
-.PHONY : GOMOKU/fast
+GomokuGame/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GomokuGame.dir\build.make CMakeFiles/GomokuGame.dir/build
+.PHONY : GomokuGame/fast
 
 App/main.obj: App/main.cpp.obj
 .PHONY : App/main.obj
 
 # target to build an object file
 App/main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GOMOKU.dir\build.make CMakeFiles/GOMOKU.dir/App/main.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GomokuGame.dir\build.make CMakeFiles/GomokuGame.dir/App/main.cpp.obj
 .PHONY : App/main.cpp.obj
 
 App/main.i: App/main.cpp.i
@@ -141,7 +141,7 @@ App/main.i: App/main.cpp.i
 
 # target to preprocess a source file
 App/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GOMOKU.dir\build.make CMakeFiles/GOMOKU.dir/App/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GomokuGame.dir\build.make CMakeFiles/GomokuGame.dir/App/main.cpp.i
 .PHONY : App/main.cpp.i
 
 App/main.s: App/main.cpp.s
@@ -149,7 +149,7 @@ App/main.s: App/main.cpp.s
 
 # target to generate assembly for a file
 App/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GOMOKU.dir\build.make CMakeFiles/GOMOKU.dir/App/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GomokuGame.dir\build.make CMakeFiles/GomokuGame.dir/App/main.cpp.s
 .PHONY : App/main.cpp.s
 
 # Help Target
@@ -160,7 +160,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... GOMOKU
+	@echo ... GomokuGame
 	@echo ... App/main.obj
 	@echo ... App/main.i
 	@echo ... App/main.s

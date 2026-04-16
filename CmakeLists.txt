@@ -1,49 +1,42 @@
 cmake_minimum_required(VERSION 3.22)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS ON)
 
-# Define the build type
 if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE "Debug")
 endif()
 
-# Set the project name
-set(CMAKE_PROJECT_NAME ${workspaceFolderBasename})
+set(MY_PROJECT_NAME "GomokuGame")
+project(${MY_PROJECT_NAME} LANGUAGES CXX)
 
-# Enable compile command to ease indexing with e.g. clangd
 set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
-
-# Core project settings
-project(${CMAKE_PROJECT_NAME})
 message("Build type: " ${CMAKE_BUILD_TYPE})
 
-# Enable CMake support for ASM and C++ languages
-enable_language(CXX ASM)
+file(GLOB_RECURSE APP_SRH ${CMAKE_CURRENT_SOURCE_DIR}/App/*.h)
+file(GLOB_RECURSE APP_SRCPP ${CMAKE_CURRENT_SOURCE_DIR}/App/*.cpp)
 
-# Create an executable object type
-add_executable(${CMAKE_PROJECT_NAME})
+set(RAYLIB_PATH "${CMAKE_CURRENT_SOURCE_DIR}/include/raylib")
 
-file( GLOB_RECURSE APP_SRH ${CMAKE_CURRENT_SOURCE_DIR}/App/*.h)
-file( GLOB_RECURSE APP_SRCPP ${CMAKE_CURRENT_SOURCE_DIR}/App/*.cpp)
+add_executable(${MY_PROJECT_NAME} ${APP_SRCPP} ${APP_SRH})
 
-target_link_directories(${CMAKE_PROJECT_NAME} PRIVATE
-    # Add user defined library search paths
+target_include_directories(${MY_PROJECT_NAME} PRIVATE 
+    ${CMAKE_CURRENT_SOURCE_DIR}/App
+    ${RAYLIB_PATH}/include
 )
 
-# Add sources to executable
-target_sources(${CMAKE_PROJECT_NAME} PRIVATE
-    ${APP_SRCPP}
-    ${APP_SRH}
-    # Add user sources here
+target_link_directories(GomokuGame PRIVATE 
+    ${RAYLIB_PATH}/lib
 )
 
-target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
-    # Add user defined include paths
+target_link_libraries(GomokuGame PRIVATE 
+    raylib 
+    opengl32 
+    gdi32 
+    winmm
 )
 
-# Add project symbols (macros)
-target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE
-    # Add user defined symbols
-)
+if(WIN32 AND CMAKE_BUILD_TYPE STREQUAL "Release")
+    set_property(TARGET ${MY_PROJECT_NAME} PROPERTY WIN32_EXECUTABLE ON)
+endif()

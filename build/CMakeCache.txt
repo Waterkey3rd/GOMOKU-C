@@ -20,34 +20,8 @@ CMAKE_ADDR2LINE:FILEPATH=D:/Softwares/msys2/ucrt64/bin/addr2line.exe
 //Path to a program.
 CMAKE_AR:FILEPATH=D:/Softwares/msys2/ucrt64/bin/ar.exe
 
-//ASM compiler
-CMAKE_ASM_COMPILER:FILEPATH=D:/Softwares/msys2/ucrt64/bin/gcc.exe
-
-//A wrapper around 'ar' adding the appropriate '--plugin' option
-// for the GCC compiler
-CMAKE_ASM_COMPILER_AR:FILEPATH=D:/Softwares/msys2/ucrt64/bin/gcc-ar.exe
-
-//A wrapper around 'ranlib' adding the appropriate '--plugin' option
-// for the GCC compiler
-CMAKE_ASM_COMPILER_RANLIB:FILEPATH=D:/Softwares/msys2/ucrt64/bin/gcc-ranlib.exe
-
-//Flags used by the ASM compiler during all build types.
-CMAKE_ASM_FLAGS:STRING=
-
-//Flags used by the ASM compiler during DEBUG builds.
-CMAKE_ASM_FLAGS_DEBUG:STRING=-g
-
-//Flags used by the ASM compiler during MINSIZEREL builds.
-CMAKE_ASM_FLAGS_MINSIZEREL:STRING=-Os -DNDEBUG
-
-//Flags used by the ASM compiler during RELEASE builds.
-CMAKE_ASM_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
-
-//Flags used by the ASM compiler during RELWITHDEBINFO builds.
-CMAKE_ASM_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
-
 //No help, variable specified on the command line.
-CMAKE_BUILD_TYPE:STRING=Debug
+CMAKE_BUILD_TYPE:STRING=Release
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
@@ -84,32 +58,6 @@ CMAKE_CXX_STANDARD_LIBRARIES:STRING=-lkernel32 -luser32 -lgdi32 -lwinspool -lshe
 //No help, variable specified on the command line.
 CMAKE_C_COMPILER:FILEPATH=D:/Softwares/msys2/ucrt64/bin/gcc.exe
 
-//A wrapper around 'ar' adding the appropriate '--plugin' option
-// for the GCC compiler
-CMAKE_C_COMPILER_AR:FILEPATH=D:/Softwares/msys2/ucrt64/bin/gcc-ar.exe
-
-//A wrapper around 'ranlib' adding the appropriate '--plugin' option
-// for the GCC compiler
-CMAKE_C_COMPILER_RANLIB:FILEPATH=D:/Softwares/msys2/ucrt64/bin/gcc-ranlib.exe
-
-//Flags used by the C compiler during all build types.
-CMAKE_C_FLAGS:STRING=
-
-//Flags used by the C compiler during DEBUG builds.
-CMAKE_C_FLAGS_DEBUG:STRING=-g
-
-//Flags used by the C compiler during MINSIZEREL builds.
-CMAKE_C_FLAGS_MINSIZEREL:STRING=-Os -DNDEBUG
-
-//Flags used by the C compiler during RELEASE builds.
-CMAKE_C_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
-
-//Flags used by the C compiler during RELWITHDEBINFO builds.
-CMAKE_C_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
-
-//Libraries linked by default with all C applications.
-CMAKE_C_STANDARD_LIBRARIES:STRING=-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-
 //Path to a program.
 CMAKE_DLLTOOL:FILEPATH=D:/Softwares/msys2/ucrt64/bin/dlltool.exe
 
@@ -138,7 +86,7 @@ CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=E:/Documents/Code/C++/projects/Gomoku/bu
 CMAKE_GNUtoMS:BOOL=OFF
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/GUI
+CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/GomokuGame
 
 //Path to a program.
 CMAKE_LINKER:FILEPATH=D:/Softwares/msys2/ucrt64/bin/ld.exe
@@ -185,7 +133,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=GOMOKU
+CMAKE_PROJECT_NAME:STATIC=GomokuGame
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION:STATIC=
@@ -286,22 +234,22 @@ CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
-GOMOKU_BINARY_DIR:STATIC=E:/Documents/Code/C++/projects/Gomoku/build
+GomokuGame_BINARY_DIR:STATIC=E:/Documents/Code/C++/projects/Gomoku/build
 
 //Value Computed by CMake
-GOMOKU_IS_TOP_LEVEL:STATIC=ON
+GomokuGame_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-GOMOKU_SOURCE_DIR:STATIC=E:/Documents/Code/C++/projects/Gomoku
+GomokuGame_SOURCE_DIR:STATIC=E:/Documents/Code/C++/projects/Gomoku
 
 //Value Computed by CMake
-GUI_BINARY_DIR:STATIC=E:/Documents/Code/C++/projects/Gomoku/build
+Gomoku_BINARY_DIR:STATIC=E:/Documents/Code/C++/projects/Gomoku/build
 
 //Value Computed by CMake
-GUI_IS_TOP_LEVEL:STATIC=ON
+Gomoku_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-GUI_SOURCE_DIR:STATIC=E:/Documents/Code/C++/projects/Gomoku
+Gomoku_SOURCE_DIR:STATIC=E:/Documents/Code/C++/projects/Gomoku
 
 
 ########################
@@ -312,23 +260,6 @@ GUI_SOURCE_DIR:STATIC=E:/Documents/Code/C++/projects/Gomoku
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
 CMAKE_AR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_ASM_COMPILER
-CMAKE_ASM_COMPILER-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_ASM_COMPILER_AR
-CMAKE_ASM_COMPILER_AR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_ASM_COMPILER_RANLIB
-CMAKE_ASM_COMPILER_RANLIB-ADVANCED:INTERNAL=1
-CMAKE_ASM_COMPILER_WORKS:INTERNAL=1
-//ADVANCED property for variable: CMAKE_ASM_FLAGS
-CMAKE_ASM_FLAGS-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_ASM_FLAGS_DEBUG
-CMAKE_ASM_FLAGS_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_ASM_FLAGS_MINSIZEREL
-CMAKE_ASM_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_ASM_FLAGS_RELEASE
-CMAKE_ASM_FLAGS_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_ASM_FLAGS_RELWITHDEBINFO
-CMAKE_ASM_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //This is the directory where this CMakeCache.txt was created
 CMAKE_CACHEFILE_DIR:INTERNAL=e:/Documents/Code/C++/projects/Gomoku/build
 //Major version of cmake used to create the current loaded cache
@@ -363,24 +294,6 @@ CMAKE_CXX_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 CMAKE_CXX_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_STANDARD_LIBRARIES
 CMAKE_CXX_STANDARD_LIBRARIES-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_C_COMPILER
-CMAKE_C_COMPILER-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_C_COMPILER_AR
-CMAKE_C_COMPILER_AR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_C_COMPILER_RANLIB
-CMAKE_C_COMPILER_RANLIB-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_C_FLAGS
-CMAKE_C_FLAGS-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_C_FLAGS_DEBUG
-CMAKE_C_FLAGS_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_C_FLAGS_MINSIZEREL
-CMAKE_C_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_C_FLAGS_RELEASE
-CMAKE_C_FLAGS_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_C_FLAGS_RELWITHDEBINFO
-CMAKE_C_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_C_STANDARD_LIBRARIES
-CMAKE_C_STANDARD_LIBRARIES-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_DLLTOOL
 CMAKE_DLLTOOL-ADVANCED:INTERNAL=1
 //Path to cache edit program executable.

@@ -1,5 +1,6 @@
 #pragma once
 #include "Chessboard.h"
+namespace GOMOKU{
 class Player{
 private:
     Chessboard* bindChessboard=nullptr;
@@ -42,3 +43,4 @@ public:
         return isSuccess;
     }
 };
+}

@@ -62,11 +62,11 @@ CMAKE_BINARY_DIR = E:\Documents\Code\C++\projects\Gomoku\build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/GOMOKU.dir/all
+all: CMakeFiles/GomokuGame.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
-codegen: CMakeFiles/GOMOKU.dir/codegen
+codegen: CMakeFiles/GomokuGame.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -74,40 +74,40 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/GOMOKU.dir/clean
+clean: CMakeFiles/GomokuGame.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/GOMOKU.dir
+# Target rules for target CMakeFiles/GomokuGame.dir
 
 # All Build rule for target.
-CMakeFiles/GOMOKU.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GOMOKU.dir\build.make CMakeFiles/GOMOKU.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GOMOKU.dir\build.make CMakeFiles/GOMOKU.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=E:\Documents\Code\C++\projects\Gomoku\build\CMakeFiles --progress-num=1,2 "Built target GOMOKU"
-.PHONY : CMakeFiles/GOMOKU.dir/all
+CMakeFiles/GomokuGame.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GomokuGame.dir\build.make CMakeFiles/GomokuGame.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GomokuGame.dir\build.make CMakeFiles/GomokuGame.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=E:\Documents\Code\C++\projects\Gomoku\build\CMakeFiles --progress-num=1,2 "Built target GomokuGame"
+.PHONY : CMakeFiles/GomokuGame.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/GOMOKU.dir/rule: cmake_check_build_system
+CMakeFiles/GomokuGame.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start E:\Documents\Code\C++\projects\Gomoku\build\CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/GOMOKU.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/GomokuGame.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start E:\Documents\Code\C++\projects\Gomoku\build\CMakeFiles 0
-.PHONY : CMakeFiles/GOMOKU.dir/rule
+.PHONY : CMakeFiles/GomokuGame.dir/rule
 
 # Convenience name for target.
-GOMOKU: CMakeFiles/GOMOKU.dir/rule
-.PHONY : GOMOKU
+GomokuGame: CMakeFiles/GomokuGame.dir/rule
+.PHONY : GomokuGame
 
 # codegen rule for target.
-CMakeFiles/GOMOKU.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GOMOKU.dir\build.make CMakeFiles/GOMOKU.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=E:\Documents\Code\C++\projects\Gomoku\build\CMakeFiles --progress-num=1,2 "Finished codegen for target GOMOKU"
-.PHONY : CMakeFiles/GOMOKU.dir/codegen
+CMakeFiles/GomokuGame.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GomokuGame.dir\build.make CMakeFiles/GomokuGame.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=E:\Documents\Code\C++\projects\Gomoku\build\CMakeFiles --progress-num=1,2 "Finished codegen for target GomokuGame"
+.PHONY : CMakeFiles/GomokuGame.dir/codegen
 
 # clean rule for target.
-CMakeFiles/GOMOKU.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GOMOKU.dir\build.make CMakeFiles/GOMOKU.dir/clean
-.PHONY : CMakeFiles/GOMOKU.dir/clean
+CMakeFiles/GomokuGame.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GomokuGame.dir\build.make CMakeFiles/GomokuGame.dir/clean
+.PHONY : CMakeFiles/GomokuGame.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -2,6 +2,7 @@
 #include <vector>
 #include "stdint.h"
 #include <cstring>
+namespace GOMOKU{
 enum class Color:uint8_t{
     None=0,
     Black,
@@ -14,8 +15,9 @@ struct placeAction{
 };
 struct Event{
     int id;
+    // int eventid;
     union{
-        placeAction palceaction;
+        placeAction placeaction;
     };
 };
 class Chessboard
@@ -53,9 +55,10 @@ public:
     inline const int getBoardSize() const {return W*H;}
     inline const int& getBoardH() const {return H;}
     inline const int& getBoardW() const {return W;}
+    inline const int& getStep() const {return step;}
     //落子接口
     bool place_piece(int x,int y,Color color){
-        if(board[x][y]!=Color::None||!isready()) return false;
+        if(board[y][x]!=Color::None||!isready()) return false;
         lastPlaceAction={.x=x,.y=y,.color=color};
         board[y][x]=color;
         step++;
@@ -63,7 +66,7 @@ public:
         return true;
     }
     bool place_piece(placeAction action){
-        if(board[action.x][action.y]!=Color::None||!isready()) return false;
+        if(board[action.y][action.x]!=Color::None||!isready()) return false;
         board[action.y][action.x]=action.color;
         lastPlaceAction=action;
         step++;
@@ -86,6 +89,7 @@ public:
         }  
         if(color==Color::White&&white_ready)
             return false;
+        return false;
     }
     //检查胜利
     Color checkWin(){
@@ -161,3 +165,4 @@ public:
         return Color::None;
     }
 };
+}

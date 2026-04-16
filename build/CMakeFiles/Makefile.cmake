@@ -7,8 +7,6 @@ set(CMAKE_DEPENDS_GENERATOR "MinGW Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "D:/Softwares/cmake/share/cmake-4.1/Modules/CMakeASMInformation.cmake"
-  "D:/Softwares/cmake/share/cmake-4.1/Modules/CMakeCInformation.cmake"
   "D:/Softwares/cmake/share/cmake-4.1/Modules/CMakeCXXInformation.cmake"
   "D:/Softwares/cmake/share/cmake-4.1/Modules/CMakeCommonLanguageInclude.cmake"
   "D:/Softwares/cmake/share/cmake-4.1/Modules/CMakeGenericSystem.cmake"
@@ -18,26 +16,15 @@ set(CMAKE_MAKEFILE_DEPENDS
   "D:/Softwares/cmake/share/cmake-4.1/Modules/CMakeSystemSpecificInformation.cmake"
   "D:/Softwares/cmake/share/cmake-4.1/Modules/CMakeSystemSpecificInitialize.cmake"
   "D:/Softwares/cmake/share/cmake-4.1/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
-  "D:/Softwares/cmake/share/cmake-4.1/Modules/Compiler/GNU-ASM.cmake"
-  "D:/Softwares/cmake/share/cmake-4.1/Modules/Compiler/GNU-C.cmake"
   "D:/Softwares/cmake/share/cmake-4.1/Modules/Compiler/GNU-CXX.cmake"
   "D:/Softwares/cmake/share/cmake-4.1/Modules/Compiler/GNU.cmake"
-  "D:/Softwares/cmake/share/cmake-4.1/Modules/Internal/CMakeASMLinkerInformation.cmake"
-  "D:/Softwares/cmake/share/cmake-4.1/Modules/Internal/CMakeCLinkerInformation.cmake"
   "D:/Softwares/cmake/share/cmake-4.1/Modules/Internal/CMakeCXXLinkerInformation.cmake"
   "D:/Softwares/cmake/share/cmake-4.1/Modules/Internal/CMakeCommonLinkerInformation.cmake"
-  "D:/Softwares/cmake/share/cmake-4.1/Modules/Linker/GNU-C.cmake"
   "D:/Softwares/cmake/share/cmake-4.1/Modules/Linker/GNU-CXX.cmake"
   "D:/Softwares/cmake/share/cmake-4.1/Modules/Linker/GNU.cmake"
   "D:/Softwares/cmake/share/cmake-4.1/Modules/Platform/Linker/GNU.cmake"
-  "D:/Softwares/cmake/share/cmake-4.1/Modules/Platform/Linker/Windows-ASM.cmake"
-  "D:/Softwares/cmake/share/cmake-4.1/Modules/Platform/Linker/Windows-GNU-ASM.cmake"
-  "D:/Softwares/cmake/share/cmake-4.1/Modules/Platform/Linker/Windows-GNU-C.cmake"
   "D:/Softwares/cmake/share/cmake-4.1/Modules/Platform/Linker/Windows-GNU-CXX.cmake"
   "D:/Softwares/cmake/share/cmake-4.1/Modules/Platform/Linker/Windows-GNU.cmake"
-  "D:/Softwares/cmake/share/cmake-4.1/Modules/Platform/Windows-GNU-ASM.cmake"
-  "D:/Softwares/cmake/share/cmake-4.1/Modules/Platform/Windows-GNU-C-ABI.cmake"
-  "D:/Softwares/cmake/share/cmake-4.1/Modules/Platform/Windows-GNU-C.cmake"
   "D:/Softwares/cmake/share/cmake-4.1/Modules/Platform/Windows-GNU-CXX-ABI.cmake"
   "D:/Softwares/cmake/share/cmake-4.1/Modules/Platform/Windows-GNU-CXX.cmake"
   "D:/Softwares/cmake/share/cmake-4.1/Modules/Platform/Windows-GNU.cmake"
@@ -46,8 +33,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "D:/Softwares/cmake/share/cmake-4.1/Modules/Platform/Windows.cmake"
   "D:/Softwares/cmake/share/cmake-4.1/Modules/Platform/WindowsPaths.cmake"
   "E:/Documents/Code/C++/projects/Gomoku/CMakeLists.txt"
-  "CMakeFiles/4.1.1/CMakeASMCompiler.cmake"
-  "CMakeFiles/4.1.1/CMakeCCompiler.cmake"
   "CMakeFiles/4.1.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/4.1.1/CMakeRCCompiler.cmake"
   "CMakeFiles/4.1.1/CMakeSystem.cmake"
@@ -66,5 +51,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/GOMOKU.dir/DependInfo.cmake"
+  "CMakeFiles/GomokuGame.dir/DependInfo.cmake"
   )
