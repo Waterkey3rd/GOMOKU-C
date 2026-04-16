@@ -1,0 +1,28 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(gdb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            // 指向你刚刚生成的 exe [cite: 48, 49]
+            "program": "${workspaceFolder}/build/GUI.exe", 
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true, // 如果是命令行程序，建议设为 true
+            "MIMode": "gdb",
+            // 指向你的 gdb 路径，通常在 gcc 所在的 bin 目录下
+            "miDebuggerPath": "D:/Softwares/msys2/ucrt64/bin/gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "CMake: build" // 调试前自动触发 CMake 编译
+        }
+    ]
+}

@@ -1,0 +1,8 @@
+[
+{
+  "directory": "E:/Documents/Code/C++/projects/Gomoku/build",
+  "command": "D:\\Softwares\\msys2\\ucrt64\\bin\\g++.exe   -g -std=gnu++17 -o CMakeFiles\\GOMOKU.dir\\App\\main.cpp.obj -c E:\\Documents\\Code\\C++\\projects\\Gomoku\\App\\main.cpp",
+  "file": "E:/Documents/Code/C++/projects/Gomoku/App/main.cpp",
+  "output": "CMakeFiles/GOMOKU.dir/App/main.cpp.obj"
+}
+]
