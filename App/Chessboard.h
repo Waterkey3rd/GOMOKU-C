@@ -1,5 +1,5 @@
 #pragma once
-#include <vector>
+#include "vector.h"
 #include "stdint.h"
 #include <cstring>
 namespace GOMOKU{
@@ -26,7 +26,7 @@ private:
     static constexpr int H=15;
     static constexpr int W = 15;
     Color board[H][W];
-    std::vector<Event> history;
+    vector<Event> history;
     placeAction lastPlaceAction;
     Color Winner=Color::None;
     bool white_ready;
@@ -48,7 +48,7 @@ public:
     }
     inline bool isready(){return white_ready&&black_ready;}
     inline bool isfull(){return step==W*H;}
-    inline const std::vector<Event>& gethistory(){return history;}
+    inline const vector<Event>& gethistory(){return history;}
     inline const placeAction& get_last_move(){return lastPlaceAction;}
     inline Color  get_piece_at(int x, int y){return board[y][x];}
     inline const Color* getBoardData() const {return &board[0][0];}
@@ -103,13 +103,15 @@ public:
         for(int i=x-1;i>=x-4&&i>=0;i--){
             if(color==board[y][i])
                 count++;
-            else if(board[y][i]!=Color::None)
+            else 
+            // if(board[y][i]!=Color::None)
                 break;
         }
         for(int i=x+1;i<=x+4&&i<W;i++){
             if(color==board[y][i])
                 count++;
-            else if(board[y][i]!=Color::None)
+            else 
+            // if(board[y][i]!=Color::None)
                 break;
         }
         if(count==5)
@@ -119,13 +121,15 @@ public:
         for(int i=y-1;i>=y-4&&i>=0;i--){
             if(color==board[i][x])
                 count++;
-            else if(board[i][x]!=Color::None)
+            else 
+            // if(board[i][x]!=Color::None)
                 break;
         }
         for(int i=y+1;i<=y+4&&i<H;i++){
             if(color==board[i][x])
                 count++;
-            else if(board[i][x]!=Color::None)
+            else 
+            // if(board[i][x]!=Color::None)
                 break;
         }
         if(count==5)
@@ -135,13 +139,15 @@ public:
         for(int i=1;i<=4&&x+i<W&&y+i<H;i++){
             if(color==board[y+i][x+i])
                 count++;
-            else if(board[y+i][x+i]!=Color::None)
+            else 
+            // if(board[y+i][x+i]!=Color::None)
                 break;
         }
-        for(int i=1;i<4&&x-i>=0&&y-i>=0;i++){
+        for(int i=1;i<=4&&x-i>=0&&y-i>=0;i++){
             if(color==board[y-i][x-i])
                 count++;
-            else if(board[y-i][x-i]!=Color::None)
+            else 
+            // if(board[y-i][x-i]!=Color::None)
                 break;
         }
         if(count==5)
@@ -151,13 +157,15 @@ public:
         for(int i=1;i<=4&&x-i>=0&&y+i<H;i++){
             if(color==board[y+i][x-i])
                 count++;
-            else if(board[y+i][x-i]!=Color::None)
+            else 
+            // if(board[y+i][x-i]!=Color::None)
                 break;
         }
-        for(int i=1;i<4&&x+i<W&&y-i>=0;i++){
+        for(int i=1;i<=4&&x+i<W&&y-i>=0;i++){
             if(color==board[y-i][x+i])
                 count++;
-            else if(board[y-i][x+i]!=Color::None)
+            else 
+            // if(board[y-i][x+i]!=Color::None)
                 break;
         }
         if(count==5)
