@@ -26,10 +26,22 @@ public:
         return true;
     }
     bool commitMove(int x,int y){
-        if(haveAction) return false;
+        if(!bindChessboard->check_piece(x, y)) return false;
         selfaction={.x=x,.y=y,.color=selfcolor}; 
         haveAction=true;
         return true;
+    }
+    bool comfirmSelection(placeAction a){
+        if(!haveAction) return false;
+        bool isSuccess=true;
+        if(haveAction&&a.x==selfaction.x&&a.y==selfaction.y){
+            bindChessboard->place_piece(selfaction);
+            haveAction=false;
+        }else{
+            isSuccess=false;
+            haveAction=false;
+        }
+        return isSuccess;
     }
     bool comfirmSelection(bool iscomfirm){
         if(!haveAction) return false;
@@ -41,6 +53,12 @@ public:
             haveAction=false;
         }
         return isSuccess;
+    }
+    const Color& getColor() const {return selfcolor;}
+    const placeAction getAction() const {
+        if(haveAction)
+            return selfaction;
+        return {.x=0,.y=0,.color=Color::None};
     }
 };
 }

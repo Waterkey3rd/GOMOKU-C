@@ -62,5 +62,9 @@ public:
     T& operator[](size_t index){
         return head[index];
     }
+    const T& operator[](size_t index) const {
+        return head[index];
+    }
+    
 };
 // }

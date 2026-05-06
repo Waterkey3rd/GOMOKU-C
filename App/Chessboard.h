@@ -13,6 +13,7 @@ struct placeAction{
     int x,y;
     Color color;
 };
+
 struct Event{
     int id;
     // int eventid;
@@ -40,7 +41,7 @@ public://构造相关
     ~Chessboard() =default;
 public:
     void reset(){
-        std::memset(board,0,sizeof(board));
+        std::memset(board,(int)(Color::None),sizeof(board));
         Winner=Color::None;
         step=0;
         lastPlaceAction= {.x=0,.y=0,.color=Color::None};
@@ -73,6 +74,7 @@ public:
         history.push_back({step,action});
         return true;
     }
+    bool check_piece(int x,int y){return board[y][x]==Color::None;}
     bool registerPlayer(Color color){
         if(color==Color::None) return false;
         if(color==Color::Black&&!black_ready)
